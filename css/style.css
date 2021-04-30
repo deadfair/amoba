@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+.firstpart{
+    height:800px;
+    background: rgb(204, 204, 204);
+
+}
+.meretezes{
+    padding:50px 0 0 0;
+}
+.firstpart h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    height:50px;
+}
+.firstpart h1 span{
+    color:red;
+}
+.info{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+.tabla{
+    height: 500px;
+    width:500px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill,  minmax(50px,1fr) );
+    grid-template-rows: repeat(auto-fill,  minmax(50px,1fr) );
+    justify-items: stretch;
+    align-items: stretch;
+    margin:auto;
+}
+.elem{
+        border: 1px solid black;
+        display:flex;
+        cursor:pointer;      
+}
+.x{
+    margin: auto;
+    font-size: 40px;
+    min-width:50px;
+    min-height:50px;
+    text-align: center;
+}
+.restart{
+    right:50px;
+}
+.menu{
+    left:50px;
+
+}
+.restart, .menu{
+    position:absolute;
+    top:50px;
+
+    height:50px;
+    cursor:pointer;
+    background-color: red;
+    font-size: 25px;
+    width:100px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    text-align: center;
+    padding:5px 0;
+    cursor:pointer;
+    border:4px solid red;
+}
+.restart:hover{
+    color: red;
+    background: none;
+}
+.menu:hover{
+    color: red;
+    background: none;
+}
+
+
+.info p{
+    min-height:60px;
+    margin:0 10px;
+    text-align: center;
+}
+.firstpart .info p:nth-child(2n+1){
+    min-width: 160px;
+    font-size: 22px;
+    padding: 16px 0;
+}
+.firstpart .info p:nth-child(2n){
+    font-size: 28px ;
+    min-width: 50px;
+    padding: 13px 0;
+
+
+}
+
+
+
+
+
+
+.playerflex{
+    display:flex;
+    flex-flow: row nowrap;
+}
+.jelek{
+    height:60px;
+    margin:0 10px;
+    text-align: center;
+    font-size: 28px ;
+    min-width: 50px;
+    padding: 13px 0;
+}
+.playerflex h1{
+    font-size: 28px;
+    min-width: 50px;
+    min-width: 50px;
+    padding: 13px 0;
+    text-align: center;
+
+}
+
+.playercserex{
+    font-size: 28px;
+    min-width: 50px;
+    min-width: 50px;
+    padding: 13px 0;
+    text-align: center;
+    cursor:pointer;
+    border: 2px solid red;
+    border-radius: 14px;
+
+}
+.jatekosadas{
+    display:flex;
+    flex-flow: row wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.botton{
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    background-color: yellow;
+}
+.buttonpack{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.buttonpack p{
+    display: inline-block;
+    font-size: 25px;
+    width:100px;
+    padding: 8px 16px;
+    margin: 10px 3px;    
+    width:100px;
+    text-align: center;
+
+}
+.button2{
+    margin: auto 0 ;
+    font-size: 40px;
+    min-width:50px;
+    min-height:50px;
+    text-align: center;
+}
+.playerstyle, .button{
+    display: inline-block;
+    font-size: 25px;
+    width:100px;
+    padding: 8px 16px;
+    margin: 10px 3px;
+    border-radius: 16px;
+    transition: all 0.5s ease;
+    text-align: center;
+    cursor:pointer;
+}
+.playerstyle, .button:hover{
+    color: var(--szin1);
+    background: none;
+}
+
+
+.blue{
+    color:blue;
+}
+.red{
+    color:red;
+}
+.green{
+    color:green;
+}
+.yellow{
+    color:yellow;
+}
+.black{
+    color:black;
+}
+.orange{
+    color:orange;
+}
+.pink{
+    color:pink;
+}
+.brown{
+    color:brown;
+}
+
+.bblue{
+    background:blue;
+    border: 2px solid blue;
+
+}
+.bred{
+    background:red;
+    border: 2px solid red;
+
+}
+.bgreen{
+    background:green;
+    border: 2px solid green;
+
+}
+.byellow{
+    background:yellow;
+    border: 2px solid yellow;
+
+}
+.bblack{
+    background:black;
+    color:white;
+    border: 2px solid black;
+
+}
+.borange{
+    background:orange;
+    border: 2px solid orange;
+
+}
+.bpink{
+    background:pink;
+    border: 2px solid pink;
+
+}
+.bbrown{
+    background:brown;
+    border: 2px solid brown;
+
+}
