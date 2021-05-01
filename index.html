@@ -10,8 +10,17 @@
 </head>
 <body>
     
+    <nav class="navbar">
+            <ul class="menu">
+                <li class="options btn">Options</li>
+                <li class="restart btn">Restart</li>
+            </ul>
+    </nav>
+
+
+
+
     <section class="firstpart">
-        <div class="meretezes">
             <h1>AMŐBA<span>KING</span></h1>
             <div class="info">
                 <p>következő játékos:</p>
@@ -19,18 +28,44 @@
                 <p>A győztes játékos:</p>
                 <p id="gyoztes"></p>
             </div>
-            <div class="menu">Menu</div>
 
-            <div class="restart">Restart</div>
             <div class="tabla"></div>
-        </div>  
     </section>
+
+
+
     <section class="secondpart">
-        
-    <div>a pálya mérete: x: y:  +- gombokkal válsuk: default 10x10</div>
+        <div class="tablameret">
+            <div class="meret">
+                <p>Méret:</p>
+            </div>
+            <div class="meret">
+                <p>X:</p>
+                <p id="minuszx" class="btn">-</p>
+                <p id="xkoord" >10</p>
+                <p id="pluszx" class="btn">+</p>
+            </div>
+            <div class="meret">
+                <p>Y:</p>
+                <p id="minuszy"class="btn">-</p>
+                <p id="ykoord">10</p>
+                <p id="pluszy" class="btn">+</p>
+            </div>
+        </div>
     
-    <div>játékosok neve!! viszalépéskor frissiteni a kövi játékost! </div>
-    <div id="jatekosadas">
+    <div>játékosok neve!! viszalépéskor frissiteni a kövi játékost!=>ujra init a táblát </div>
+    
+    <div class="jatekosadas">
+        <div class="playerflex">
+            <p>Add:</p><div class="pluszbotton btn">+</div>
+        </div>
+        <div class="playerflex">
+            <p>Remove:</p><div class="minuszbotton btn">-</div>
+        </div>
+    </div>
+
+    
+    <div id="jatekosadas" class="jatekosadas">
         <div class="playerflex">
             <h1>Player1:</h1>
             <div class="playercsere1 playercserex">swap</div>
@@ -42,8 +77,8 @@
             <div class="aplayer2 jelek"></div>
         </div>
     </div>
-    <div class="minuszbotton">minusz</div>
-    <div class="pluszbotton">pluszz</div>
+
+    
 
 
 
