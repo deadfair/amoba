@@ -311,10 +311,11 @@ function section2init2player(){
         playerek.newPlayer();
         div.setAttribute("class","playerflex"); 
         div.setAttribute("id",`divid${x}`); 
-        div.innerHTML=    `<h1>Player${x}:</h1>
-                            <div class="playercsere${x} playercserex">swap</div>
+        div.innerHTML=    `<p class="xy">Player${x}:</p>
+                            <i class="playercsere${x} playercserex fas fa-sync-alt"></i>
                             <div class="aplayer${x} jelek ${playerek.playerekFelhasznált[x-1].szin}">
                             ${playerek.playerekFelhasznált[x-1].jel}</div>`;
+
         var element=document.getElementById("jatekosadas")
         element.appendChild(div); 
         if (x===playerek.playerek.length) {
@@ -370,25 +371,33 @@ function section2init2player(){
 
     
 }
-
-
-
-
-
-
-
+allapot=true;
 
 options=document.querySelector(".options");
 options.onclick=()=>{
-    var x=Number(document.getElementById("xkoord").innerHTML);
-    var y=Number(document.getElementById("ykoord").innerHTML);
-    tabla.x=x;
-    tabla.y=y;
-    tabla.tablamake(playerek);
-    gyoker.style.height = 50*y+"px";
-    gyoker.style.width = 50*x+"px";
+    if(allapot){
+        document.querySelector(".firstpart").classList.add("hatra");
+        document.querySelector(".secondpart").classList.remove("hatra");
+        allapot=false;
+    }else{
+        document.querySelector(".firstpart").classList.remove("hatra");
+        document.querySelector(".secondpart").classList.add("hatra");
+        allapot=true;
+        var x=Number(document.getElementById("xkoord").innerHTML);
+        var y=Number(document.getElementById("ykoord").innerHTML);
+        tabla.x=x;
+        tabla.y=y;
+        tabla.tablamake(playerek);
+        gyoker.style.height = 50*y+"px";
+        gyoker.style.width = 50*x+"px";
+    }
+
 
 }
+// player  add    remove // mint felette
+// +2 gomb a visszalépéshez // mégse    +    save and restart
+
+
 
 
 

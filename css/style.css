@@ -22,6 +22,10 @@ p{
     font-size: 22px;
 
 }
+
+i{
+    font-size:1.8em;
+}
 /*navbar--------------------------------------------------------------------------------*/
 .navbar{
     z-index: 2147483647;
@@ -98,10 +102,22 @@ p{
     min-width: 50px;
     font-weight: 900;
 }
+
+.firstpart{
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.hatra{
+    opacity: 0;
+    z-index: -99;
+}
 /*second--------------------------------------------------------------------------------*/
 
 .secondpart{
-    /*ide majd kell vmi*/
+    top:0;
+    left:0;
+    position: absolute;
+    transition: all 0.5s linear;
 }
 
 
@@ -109,32 +125,29 @@ p{
     display:flex;
     flex-flow: row wrap;
     width:100%;
-    justify-content: space-evenly;
     height:60px;
-    align-items: center;
 }
 .meret{
+    flex:1 1 0;
     display:flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
 
 }
-.meret .btn,.playerflex .btn{
-    min-width:30px;
-    height:30px;
-    border:3px solid red;
-    border-radius: 50%;
-    margin:auto;
-    margin:10px;
-    text-align: center;
-    font-weight: 900;
-}
+
 
 .meret p:nth-child(4n+3){
     text-align: center;
     min-width: 40px;
 }
+
+.xy{
+    margin:0 10px ;
+}
+
+
+
 
 
 
@@ -172,11 +185,7 @@ p{
 }
 
 .playercserex{
-    font-size: 28px;
-    text-align: center;
     cursor:pointer;
-    border: 3px solid red;
-    border-radius: 50%;
 }
 
 
