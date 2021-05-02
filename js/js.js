@@ -369,20 +369,23 @@ function section2init2player(){
         }
     }
 
-    
-}
-allapot=true;
-
-options=document.querySelector(".options");
-options.onclick=()=>{
+    allapot=true;
+    options=document.querySelector(".options");
+    options.onclick=(e)=>{
     if(allapot){
-        document.querySelector(".firstpart").classList.add("hatra");
         document.querySelector(".secondpart").classList.remove("hatra");
+        document.querySelector(".firstpart").classList.add("hatra");
+        e.target.innerHTML='Save';
+        document.querySelector(".restart").classList.add("jobbra");
+
         allapot=false;
     }else{
         document.querySelector(".firstpart").classList.remove("hatra");
         document.querySelector(".secondpart").classList.add("hatra");
         allapot=true;
+        e.target.innerHTML='Options';
+        document.querySelector(".restart").classList.remove("jobbra");
+
         var x=Number(document.getElementById("xkoord").innerHTML);
         var y=Number(document.getElementById("ykoord").innerHTML);
         tabla.x=x;
@@ -394,9 +397,13 @@ options.onclick=()=>{
 
 
 }
-// player  add    remove // mint felette
-// +2 gomb a visszalépéshez // mégse    +    save and restart
+}
 
+
+// döntetlen kiírása
+// playerre kattintva név csere
+// playerek számának jelzése
+// abcd.... 1234... oszlop/sorok
 
 
 

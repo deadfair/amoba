@@ -46,7 +46,7 @@ i{
 .menu li{
     list-style: none;
     transition: color 0.3 ease;
-    padding:20px;
+    padding:20px 50px;
 }
 
 .menu li:hover{
@@ -125,7 +125,7 @@ i{
     display:flex;
     flex-flow: row wrap;
     width:100%;
-    height:60px;
+    height:70px;
 }
 .meret{
     flex:1 1 0;
@@ -133,7 +133,12 @@ i{
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-
+margin:10px 50px;
+border: 3px solid rgb(74, 180, 230);
+border-radius: 8px;
+box-shadow: 1px -1px 2px 2px rgb(103, 191, 231)
+            ,inset 1px 1px 2px 2px rgb(16, 158, 224);
+            background: rgb(171, 216, 236);
 }
 
 
@@ -145,17 +150,45 @@ i{
 .xy{
     margin:0 10px ;
 }
+i:hover{
+    color:rgb(245, 0, 0);
+}
+
+.jatekosaddremove{
+    height:70px;
+align-content: center;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin:10px 50px;
+border: 3px solid rgb(74, 180, 230);
+border-radius: 8px;
+box-shadow: 1px -1px 2px 2px rgb(103, 191, 231)
+            ,inset 1px 1px 2px 2px rgb(16, 158, 224);
+            background: rgb(171, 216, 236);
+
+}
+
+.jatekosaddremove p:nth-child(1){
+    transform: translateX(-28px);
+}
+
+.jatekosaddremove .playerflex:nth-child(3){
+    transform: translateX(28px);
+}
 
 
-
-
-
-
-
-
-
-
-
+.jatekosadas .playerflex{
+    margin:10px 10px;
+border: 3px solid rgb(74, 180, 230);
+border-radius: 8px;
+box-shadow: 1px -1px 2px 2px rgb(103, 191, 231)
+            ,inset 1px 1px 2px 2px rgb(16, 158, 224);
+            background: rgb(171, 216, 236);
+            width:205px;
+}
 
 
 .jatekosadas{
@@ -169,10 +202,14 @@ i{
     align-items: center;
     height:80px;
 
+
 }
 
 
-
+.jobbra{
+    transform: translateX(+100%);
+    opacity:0;
+}
 
 
 .jelek{
