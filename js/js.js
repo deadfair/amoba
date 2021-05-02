@@ -233,23 +233,7 @@ class Tabla{
 }
 //8x15 4 sor 2.tól
 
-szinek=["black","blue","red","green","yellow","orange","pink","brown"];
-jelek=['O','X'];
-idk=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-playerek=new Playerek(szinek,jelek,idk);
 
-
-
-restart=document.querySelector(".restart");
-next=document.getElementById("nextplayer");
-gyoztes=document.getElementById("gyoztes");
-gyoker=document.querySelector(".tabla");
-tabla=new Tabla(10,10,50,gyoker,gyoztes,next,restart);//(x,y,pxegység,hova?)
-gyoker.style.height = "500px";
-gyoker.style.width = "500px";
-tabla.tablamake(playerek);
-
-section2init2player();
 
 
 
@@ -315,13 +299,11 @@ function section2init2player(){
                             <i class="playercsere${x} playercserex fas fa-sync-alt"></i>
                             <div class="aplayer${x} jelek ${playerek.playerekFelhasznált[x-1].szin}">
                             ${playerek.playerekFelhasznált[x-1].jel}</div>`;
-
         var element=document.getElementById("jatekosadas")
         element.appendChild(div); 
         if (x===playerek.playerek.length) {
             //e.target.style.display = "none";
             e.target.style.visibility = "hidden";
-
         }
         let swap=document.querySelector(`.playercsere${x}`);
         let aplayer=document.querySelector(`.aplayer${x}`);
@@ -369,15 +351,14 @@ function section2init2player(){
         }
     }
 
-    allapot=true;
-    options=document.querySelector(".options");
+    var allapot=true;
+    var options=document.querySelector(".options");
     options.onclick=(e)=>{
     if(allapot){
         document.querySelector(".secondpart").classList.remove("hatra");
         document.querySelector(".firstpart").classList.add("hatra");
         e.target.innerHTML='Save';
         document.querySelector(".restart").classList.add("jobbra");
-
         allapot=false;
     }else{
         document.querySelector(".firstpart").classList.remove("hatra");
@@ -405,7 +386,25 @@ function section2init2player(){
 // playerek számának jelzése
 // abcd.... 1234... oszlop/sorok
 
+szinek=["black","blue","red","green","yellow","orange","pink","brown"];
+jelek=['O','X'];
+idk=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+playerek=new Playerek(szinek,jelek,idk);
 
+
+
+restart=document.querySelector(".restart");
+next=document.getElementById("nextplayer");
+gyoztes=document.getElementById("gyoztes");
+gyoker=document.querySelector(".tabla");
+tabla=new Tabla(10,10,50,gyoker,gyoztes,next,restart);//(x,y,pxegység,hova?)
+gyoker.style.height = "500px";
+gyoker.style.width = "500px";
+tabla.tablamake(playerek);
+
+
+
+section2init2player();
 
 
 
