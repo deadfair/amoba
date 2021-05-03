@@ -133,12 +133,12 @@ i{
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-margin:10px 50px;
-border: 3px solid rgb(74, 180, 230);
-border-radius: 8px;
-box-shadow: 1px -1px 2px 2px rgb(103, 191, 231)
+    margin:10px 50px;
+    border: 3px solid rgb(74, 180, 230);
+    border-radius: 8px;
+    box-shadow: 1px -1px 2px 2px rgb(103, 191, 231)
             ,inset 1px 1px 2px 2px rgb(16, 158, 224);
-            background: rgb(171, 216, 236);
+    background: rgb(171, 216, 236);
 }
 
 
@@ -156,16 +156,15 @@ i:hover{
 
 .jatekosaddremove{
     height:70px;
-align-content: center;
+    align-content: center;
     display:flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    
     margin:10px 50px;
-border: 3px solid rgb(74, 180, 230);
-border-radius: 8px;
-box-shadow: 1px -1px 2px 2px rgb(103, 191, 231)
+    border: 3px solid rgb(74, 180, 230);
+    border-radius: 8px;
+    box-shadow: 1px -1px 2px 2px rgb(103, 191, 231)
             ,inset 1px 1px 2px 2px rgb(16, 158, 224);
             background: rgb(171, 216, 236);
 
@@ -201,8 +200,6 @@ box-shadow: 1px -1px 2px 2px rgb(103, 191, 231)
     flex-flow: row nowrap;
     align-items: center;
     height:80px;
-
-
 }
 
 
