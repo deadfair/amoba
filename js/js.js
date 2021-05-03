@@ -9,8 +9,8 @@ class Player{
     }
 };
 class Playerek{
-    playerek;
-    playerekFelhasznált;
+    playerek;           // 16 os állandó méretű tömb
+    playerekFelhasznált;    // változó méret, a felhasznált playereket tárolja sorba
     
     constructor(szinek,jelek,idk){
         let playerek=[];
@@ -27,7 +27,7 @@ class Playerek{
         this.playerek=playerek;
     }
 
-    removePlayer(){
+    removePlayer(){ // playerekFelhasznált-ból kivesz és beleteszi a playerekbe vissza
         var ujplayerekFelhasznált=[];
         for (let i = 0; i < this.playerekFelhasznált.length-1; i++) {
             ujplayerekFelhasznált[i]=this.playerekFelhasznált[i];
@@ -36,7 +36,7 @@ class Playerek{
         this.playerekFelhasznált=ujplayerekFelhasznált;
     }
 
-    newPlayer(){
+    newPlayer(){  // playerekfelhasználtba rakunk 1 playert  a playerekből kivesszük
         for (let i = 0; i < this.playerek.length; i++) {
             if (!(this.playerek[i]===null || this.playerek[i]===undefined) ) {
                 this.playerekFelhasznált[this.playerekFelhasznált.length]=this.playerek[i];
@@ -46,7 +46,7 @@ class Playerek{
         }
     }
     
-    getPlayerOfId(aktid){
+    getPlayerOfId(aktid){  // segéd fgv
         for (let i = 0; i < this.playerekFelhasznált.length; i++) {
             if(aktid===this.playerekFelhasznált[i].id){
             return i;
@@ -55,8 +55,8 @@ class Playerek{
         return null;
     }
     
-    getPlayerNext(aktplayer){
-        var hova=this.getPlayerOfId(aktplayer.id) // playerekFelhasznált tömbbe az aktplayer.id indexe 
+    getPlayerNext(aktplayer){ // player cseréhez kell
+        var hova=this.getPlayerOfId(aktplayer.id) 
         var index=aktplayer.id+1;
         this.playerek[aktplayer.id]=aktplayer;
         while(this.playerek[index]===null || this.playerek[index]===undefined)
@@ -79,10 +79,10 @@ class Tabla{
     gyoker;
     gombok;   //.x egy négyzetrács
     akt;      // egy számláló 0 tól a lépéseket számolja
-    gyoztes;
-    next;
-    adatok;
-    restart;
+    gyoztes; // gyüztes azonosítója html
+    next;    // köv player azonosítója, ahova kiírunk html
+    adatok;     // egy tömb amivel számolunk, hogy van e győzelem
+    restart;    // restart azonosítója html
 
     constructor(x,y,whe,gyoker,gyoztes,next,restart){
         this.x=x;
@@ -231,7 +231,6 @@ class Tabla{
     }
 
 }
-//8x15 4 sor 2.tól
 
 
 
@@ -239,7 +238,7 @@ class Tabla{
 
 
 
-function section2init2player(){
+function section2init2player(){ // 2. oldal inicializálása
     let swap1=document.querySelector(".playercsere1");
     let aplayer1=document.querySelector(".aplayer1");
     let swap2=document.querySelector(".playercsere2");
@@ -375,8 +374,6 @@ function section2init2player(){
         gyoker.style.height = 50*y+"px";
         gyoker.style.width = 50*x+"px";
     }
-
-
 }
 }
 
